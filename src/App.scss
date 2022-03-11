@@ -1,0 +1,90 @@
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  background: #168abc;
+  font-family: 'Syne Mono', monospace;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+.container{
+    display:flex;
+    flex-direction: column;
+    align-items: center;  
+}
+.app{
+  padding: 20px;
+  width: 80%;
+  height: auto;
+  border-radius: 5px;  
+  align-items: center;
+  justify-content: center;
+
+  &-header{
+    text-align: center;
+    background: linear-gradient(to right,#168abc, #000046, #168abc);
+    padding: 20px 0;
+    &__title{      
+      font-size: 2.2rem;
+      color:white;
+      text-align: center;
+    }
+    &__search{      
+      margin-top: 1rem;
+      width: 32.5%;
+      font-size: 1.5rem;               
+      outline: none;      
+      &:focus{
+          outline:none;   
+          color:white;
+          background:rgba(85,122,148, 0.5);        
+          box-shadow: 0 1rem 2rem rgba(black, .1);
+          border-bottom: 3px solid white;
+      }              
+    }  
+  }  
+  &-tasklist {    
+    margin-top: 1rem;
+     &__list {
+      list-style-type: none;
+    }
+  }
+}  
+

@@ -1,0 +1,29 @@
+.task {
+    display: flex;
+    flex-direction: row;  
+    margin-top: 1rem;
+    color:white;    
+    border:1px solid rgb(254, 254, 254, 0.5);
+    padding: 1rem;
+    justify-content: space-between;
+
+    &-container{
+        display:flex;
+        &-check{
+            margin-right: 1rem;
+            cursor: pointer;
+        }  
+        &-title{
+            margin-right: 1rem; 
+            &__checked{
+                text-decoration: line-through;
+            }      
+        }
+    }
+    .button-container{
+        .button-task{
+            margin-right: .3rem
+        }     
+        
+    }
+}
